@@ -38,7 +38,7 @@ export default function AICorAnimation() {
     >
       <div className="relative isolate overflow-hidden rounded-[2rem] border border-cyan-300/20 bg-white/5 p-8 shadow-glow backdrop-blur-3xl sm:p-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(0,230,208,0.14),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(0,194,184,0.16),_transparent_30%)]" />
-        <div className="relative flex h-[420px] w-full items-center justify-center overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-cyan-500/10 via-cyan-200/5 to-transparent p-6 shadow-[inset_0_0_80px_rgba(0,230,208,0.08)]">
+        <div className="relative flex h-80 sm:h-[420px] w-full items-center justify-center overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-cyan-500/10 via-cyan-200/5 to-transparent p-6 shadow-[inset_0_0_80px_rgba(0,230,208,0.08)]">
           <motion.div
             className="absolute inset-0 rounded-[1.75rem] bg-[radial-gradient(circle,_rgba(0,230,208,0.18),_transparent_28%)]"
             animate={hovering ? { opacity: [0.4, 0.7, 0.4] } : { opacity: [0.25, 0.5, 0.25] }}
@@ -51,9 +51,9 @@ export default function AICorAnimation() {
               <motion.div
                 key={`ripple-${index}`}
                 className="absolute rounded-full border border-cyan-400/40"
-                initial={{ r: 60, opacity: 0.8 }}
+                initial={{ r: 40, opacity: 0.8 }}
                 animate={{
-                  r: [60, 140],
+                  r: [40, typeof window !== 'undefined' && window.innerWidth < 640 ? 100 : 140],
                   opacity: [0.8, 0],
                 }}
                 transition={{
@@ -76,8 +76,9 @@ export default function AICorAnimation() {
             {[...Array(6)].map((_, i) => {
               const angle = (i * 360) / 6;
               const rad = (angle * Math.PI) / 180;
-              const x = 120 * Math.cos(rad);
-              const y = 120 * Math.sin(rad);
+              const radius = typeof window !== 'undefined' && window.innerWidth < 640 ? 80 : 120;
+              const x = radius * Math.cos(rad);
+              const y = radius * Math.sin(rad);
 
               return (
                 <motion.div
@@ -112,10 +113,11 @@ export default function AICorAnimation() {
                 const angle2 = ((i + 1) * 360) / 3;
                 const rad1 = (angle1 * Math.PI) / 180;
                 const rad2 = (angle2 * Math.PI) / 180;
-                const x1 = 120 * Math.cos(rad1) + 210;
-                const y1 = 120 * Math.sin(rad1) + 210;
-                const x2 = 120 * Math.cos(rad2) + 210;
-                const y2 = 120 * Math.sin(rad2) + 210;
+                const radius = typeof window !== 'undefined' && window.innerWidth < 640 ? 80 : 120;
+                const x1 = radius * Math.cos(rad1) + (typeof window !== 'undefined' && window.innerWidth < 640 ? 160 : 210);
+                const y1 = radius * Math.sin(rad1) + (typeof window !== 'undefined' && window.innerWidth < 640 ? 160 : 210);
+                const x2 = radius * Math.cos(rad2) + (typeof window !== 'undefined' && window.innerWidth < 640 ? 160 : 210);
+                const y2 = radius * Math.sin(rad2) + (typeof window !== 'undefined' && window.innerWidth < 640 ? 160 : 210);
 
                 return (
                   <motion.line
@@ -143,8 +145,9 @@ export default function AICorAnimation() {
             {[...Array(8)].map((_, i) => {
               const angle = (i * 360) / 8;
               const rad = (angle * Math.PI) / 180;
-              const startX = 140 * Math.cos(rad);
-              const startY = 140 * Math.sin(rad);
+              const radius = typeof window !== 'undefined' && window.innerWidth < 640 ? 100 : 140;
+              const startX = radius * Math.cos(rad);
+              const startY = radius * Math.sin(rad);
 
               return (
                 <motion.div
@@ -177,7 +180,7 @@ export default function AICorAnimation() {
 
             {/* Core with Pulse */}
             <motion.div
-              className="relative z-10 flex h-72 w-72 items-center justify-center rounded-full border border-white/10 bg-white/5 shadow-[0_0_90px_rgba(0,230,208,0.12)]"
+              className="relative z-10 flex h-48 w-48 sm:h-72 sm:w-72 items-center justify-center rounded-full border border-white/10 bg-white/5 shadow-[0_0_90px_rgba(0,230,208,0.12)]"
               style={{
                 transform: parallax.x !== 0 ? `translate(${parallax.x}px, ${parallax.y}px)` : "none",
               }}
@@ -194,7 +197,7 @@ export default function AICorAnimation() {
               }}
             >
               <motion.div
-                className="h-28 w-28 rounded-full bg-gradient-to-br from-zelvora-primary to-zelvora-primaryDeep shadow-[0_0_40px_rgba(0,230,208,0.35)]"
+                className="h-20 w-20 sm:h-28 sm:w-28 rounded-full bg-gradient-to-br from-zelvora-primary to-zelvora-primaryDeep shadow-[0_0_40px_rgba(0,230,208,0.35)]"
                 animate={{
                   boxShadow: hovering
                     ? "0 0 80px rgba(0, 230, 208, 0.6)"

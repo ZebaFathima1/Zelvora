@@ -207,7 +207,7 @@ export default function Home() {
                 <p className="text-sm uppercase tracking-[0.35em] text-zelvora-primary">Courses</p>
                 <h2 className="mt-4 text-4xl font-semibold text-white sm:text-5xl">Launch your AI journey today.</h2>
               </div>
-              <div className="grid gap-6 xl:grid-cols-3">
+              <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
                 {courses.map((course) => (
                   <CourseCard key={course.title} {...course} />
                 ))}
