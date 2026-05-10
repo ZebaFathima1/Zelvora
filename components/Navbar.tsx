@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -60,6 +61,14 @@ export default function Navbar() {
             <Link href="/contact" className="block rounded-full border border-cyan-300/25 bg-white/5 px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-white/10 hover:text-zelvora-primary hover:border-cyan-300/50 text-center" onClick={() => setIsMobileMenuOpen(false)}>
               Contact
             </Link>
+            <div className="flex justify-center gap-4 pt-4">
+              <a href="https://www.instagram.com/zelvora.technologies?igsh=MWJ5YmQ5OWl5cTk2Zw==" target="_blank" rel="noopener noreferrer" className="text-zelvora-secondary hover:text-zelvora-primary transition">
+                <FaInstagram size={24} />
+              </a>
+              <a href="https://www.linkedin.com/company/zelvora-technologies?trk=blended-typeahead" target="_blank" rel="noopener noreferrer" className="text-zelvora-secondary hover:text-zelvora-primary transition">
+                <FaLinkedin size={24} />
+              </a>
+            </div>
           </div>
         </motion.div>
       )}

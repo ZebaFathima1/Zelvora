@@ -2,7 +2,9 @@
 
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import Navbar from "../components/Navbar";
 import ScrollProgress from "../components/ScrollProgress";
 import BackgroundParticles from "../components/BackgroundParticles";
@@ -271,17 +273,39 @@ export default function Home() {
             </section>
 
             <footer className="border-t border-cyan-300/10 bg-zelvora-section px-6 py-8 text-zelvora-secondary sm:px-10 lg:px-16">
-              <div className="mx-auto flex max-w-[1320px] flex-col gap-8 md:flex-row md:items-center md:justify-center">
-                <div className="space-y-3 text-center">
-                  <div className="flex items-center gap-3 justify-center">
-                    <div className="h-11 w-11 rounded-2xl bg-gradient-to-br from-zelvora-primary to-zelvora-primaryDeep shadow-glow" />
-                    <span className="text-lg font-semibold text-white">Zelvora Technologies Pvt. Ltd.</span>
+              <div className="mx-auto flex max-w-[1320px] flex-col gap-8 md:flex-row md:items-start md:justify-between">
+                <div className="flex flex-col items-center gap-4 text-center md:items-start md:text-left">
+                  <div className="flex items-center gap-3">
+                    <div className="relative h-12 w-12 overflow-hidden rounded-3xl bg-black/10 shadow-glow">
+                      <Image src="/logo.png" alt="Zelvora logo" fill sizes="48px" />
+                    </div>
+                    <div>
+                      <p className="text-lg font-semibold text-white">Zelvora Technologies</p>
+                      <p className="text-xs uppercase tracking-[0.25em] text-zelvora-primary">Pvt. Ltd.</p>
+                    </div>
                   </div>
                   <p className="max-w-md text-sm text-zelvora-secondary">
                     AI-first training, workshops, and technology shaped for tomorrow’s learners.
                   </p>
                 </div>
 
+                <div className="flex flex-col items-center gap-6 text-center md:items-end md:text-right">
+                  <div>
+                    <p className="text-sm uppercase tracking-[0.35em] text-zelvora-primary">Follow us</p>
+                    <div className="mt-3 flex items-center justify-center gap-4 text-zelvora-secondary">
+                      <a href="https://www.instagram.com/zelvora.technologies?igsh=MWJ5YmQ5OWl5cTk2Zw==" target="_blank" rel="noopener noreferrer" className="rounded-full border border-cyan-300/25 p-2 text-xl transition hover:bg-white/10 hover:text-zelvora-primary">
+                        <FaInstagram />
+                      </a>
+                      <a href="https://www.linkedin.com/company/zelvora-technologies?trk=blended-typeahead" target="_blank" rel="noopener noreferrer" className="rounded-full border border-cyan-300/25 p-2 text-xl transition hover:bg-white/10 hover:text-zelvora-primary">
+                        <FaLinkedin />
+                      </a>
+                    </div>
+                  </div>
+                  <div className="space-y-1 text-sm">
+                    <p>zelvoratechnologies@gmail.com</p>
+                    <p>+91 91000 40993</p>
+                  </div>
+                </div>
               </div>
               <div className="mt-8 border-t border-cyan-300/10 pt-6 text-center text-sm text-zelvora-secondary">
                 © 2026 Zelvora Technologies Pvt. Ltd. All rights reserved.
