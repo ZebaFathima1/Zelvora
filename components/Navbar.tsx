@@ -30,6 +30,7 @@ export default function Navbar() {
           <a href="/courses" className="transition hover:text-white">Courses</a>
           <a href="/events" className="transition hover:text-white">Events</a>
           <a href="/team" className="transition hover:text-white">Team</a>
+          <a href="/faq" className="transition hover:text-white">FAQ</a>
         </nav>
         <div className="flex items-center gap-4">
           <Link href="/contact" className="rounded-full border border-cyan-300/25 bg-white/5 px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-white/10 hover:text-zelvora-primary hover:border-cyan-300/50 hidden sm:inline-flex">
@@ -58,6 +59,7 @@ export default function Navbar() {
             <a href="/courses" className="block text-sm text-zelvora-secondary hover:text-white transition" onClick={() => setIsMobileMenuOpen(false)}>Courses</a>
             <a href="/events" className="block text-sm text-zelvora-secondary hover:text-white transition" onClick={() => setIsMobileMenuOpen(false)}>Events</a>
             <a href="/team" className="block text-sm text-zelvora-secondary hover:text-white transition" onClick={() => setIsMobileMenuOpen(false)}>Team</a>
+            <a href="/faq" className="block text-sm text-zelvora-secondary hover:text-white transition" onClick={() => setIsMobileMenuOpen(false)}>FAQ</a>
             <Link href="/contact" className="block rounded-full border border-cyan-300/25 bg-white/5 px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-white/10 hover:text-zelvora-primary hover:border-cyan-300/50 text-center" onClick={() => setIsMobileMenuOpen(false)}>
               Contact
             </Link>

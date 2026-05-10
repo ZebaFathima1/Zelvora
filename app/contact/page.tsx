@@ -122,15 +122,15 @@ export default function ContactPage() {
                 <div className="space-y-4 text-zelvora-secondary">
                   <div>
                     <p className="text-sm uppercase tracking-[0.35em] text-zelvora-primary">Email</p>
-                    <p>hello@zelvora.tech</p>
+                    <p>zelvoratechnologies@gmail.com</p>
                   </div>
                   <div>
                     <p className="text-sm uppercase tracking-[0.35em] text-zelvora-primary">Phone</p>
-                    <p>+91 98765 43210</p>
+                    <p>+91 91000 40993</p>
                   </div>
                   <div>
                     <p className="text-sm uppercase tracking-[0.35em] text-zelvora-primary">Address</p>
-                    <p>AI Campus, Premium Tech Tower, Hyderabad, India</p>
+                    <p>Telangana, Hyderabad, India</p>
                   </div>
                 </div>
                 <Link href="/" className="inline-flex rounded-full border border-cyan-300/25 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10 hover:text-zelvora-primary">
