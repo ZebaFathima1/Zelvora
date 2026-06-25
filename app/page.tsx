@@ -15,7 +15,7 @@ import IntroLoader from "../components/IntroLoader";
 
 // Interactive custom components
 import CursorSpotlight from "../components/CursorSpotlight";
-import InteractiveGlobe from "../components/InteractiveGlobe";
+import LogoAnimation from "../components/LogoAnimation";
 import NeuralNetwork from "../components/NeuralNetwork";
 import ChatbotButton from "../components/ChatbotButton";
 import LogoMarquee from "../components/LogoMarquee";
@@ -208,7 +208,7 @@ export default function Home() {
 
                 {/* Right Column Interactive Globe */}
                 <div className="relative flex items-center justify-center z-10">
-                  <InteractiveGlobe />
+                  <LogoAnimation />
                 </div>
               </div>
             </section>
