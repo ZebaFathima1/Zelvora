@@ -63,22 +63,18 @@ const team = [
   {
     name: "Zeba Fathima",
     role: "Director & CEO",
-    image: "/Zeba.png",
   },
   {
     name: "Mirza Amaanullah Baig",
     role: "Director & CTO",
-    image: "/amaan.png",
   },
   {
     name: "Mohammed Hamedullah Sajid",
     role: "CHRO",
-    image: "/hamed.png",
   },
   {
     name: "Mohammed Uzair Shams",
     role: "COO",
-    image: "/uzair.png",
   },
 ];
 
