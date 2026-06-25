@@ -49,7 +49,7 @@ export default function Navbar() {
           </div>
           <div className="flex flex-col">
             <span className="text-lg font-bold text-white tracking-wide">Zelvora</span>
-            <span className="text-[10px] uppercase tracking-[0.2em] text-zelvora-primary">Technologies</span>
+            <span className="text-[8px] uppercase tracking-[0.12em] text-zelvora-primary">Technologies Pvt. Ltd.</span>
           </div>
         </Link>
 

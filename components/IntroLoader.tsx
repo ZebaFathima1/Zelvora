@@ -125,7 +125,7 @@ export default function IntroLoader({ onComplete }: IntroLoaderProps) {
         <div className="w-64 space-y-4 text-center">
           <div className="space-y-1">
             <h2 className="text-xl font-bold tracking-widest text-white uppercase">Zelvora</h2>
-            <p className="text-[10px] uppercase tracking-[0.25em] text-zelvora-primary">Technologies</p>
+            <p className="text-[8px] uppercase tracking-[0.15em] text-zelvora-primary">Technologies Pvt. Ltd.</p>
           </div>
 
           {/* Progress bar */}
