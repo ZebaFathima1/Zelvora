@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Zelvora Technologies | AI Innovations",
-  description: "Premium AI solutions, courses, and workshops by Zelvora Technologies.",
+  title: "Zelvora Technologies | Engineering Tomorrow with AI",
+  description: "Zelvora Technologies is a premium AI startup building adaptive learning tools for students, custom software configurations, and enterprise integrations.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -13,3 +13,4 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
+

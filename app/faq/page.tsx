@@ -1,7 +1,13 @@
 "use client";
 
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "../../components/Navbar";
 import ScrollProgress from "../../components/ScrollProgress";
+import NeuralNetwork from "../../components/NeuralNetwork";
+import CursorSpotlight from "../../components/CursorSpotlight";
+import ChatbotButton from "../../components/ChatbotButton";
+import { FaChevronDown } from "react-icons/fa";
 
 const faqs = [
   {
@@ -32,31 +38,80 @@ const faqs = [
 ];
 
 export default function FAQPage() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleFaq = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
     <main className="relative min-h-screen overflow-hidden bg-zelvora-bg text-white">
       <ScrollProgress />
+      <NeuralNetwork />
+      <CursorSpotlight />
+      <ChatbotButton />
       <Navbar />
-      <section className="relative isolate px-6 pb-24 pt-28 sm:px-10 lg:px-16">
-        <div className="mx-auto max-w-[1320px]">
-          <div className="mb-12 max-w-3xl space-y-4">
-            <p className="text-sm uppercase tracking-[0.35em] text-zelvora-primary">FAQ</p>
-            <h1 className="text-5xl font-semibold leading-tight text-white sm:text-6xl">Frequently Asked Questions</h1>
-            <p className="text-lg leading-8 text-zelvora-secondary">
+
+      <section className="relative isolate px-6 pb-24 pt-32 sm:px-10 lg:px-16">
+        <div className="mx-auto max-w-[800px]">
+          <div className="mb-16 text-center space-y-4">
+            <span className="text-xs uppercase tracking-[0.3em] text-zelvora-primary font-bold">Faq</span>
+            <h1 className="text-4xl font-extrabold leading-tight text-white sm:text-6xl">
+              Frequently Asked Questions
+            </h1>
+            <p className="text-base text-zelvora-secondary max-w-xl mx-auto">
               Get quick answers to common questions about Zelvora Technologies, our AI courses, workshops, and support.
             </p>
           </div>
 
-          <div className="grid gap-6 lg:grid-cols-2">
-            {faqs.map((faq, index) => (
-              <div key={index} className="glass-card rounded-3xl border border-cyan-300/15 bg-white/5 p-8 shadow-[0_0_40px_rgba(0,230,208,0.08)] backdrop-blur-xl">
-                <p className="text-sm uppercase tracking-[0.35em] text-zelvora-primary">Question</p>
-                <h2 className="mt-4 text-2xl font-semibold text-white">{faq.question}</h2>
-                <p className="mt-4 text-sm leading-7 text-zelvora-secondary">{faq.answer}</p>
-              </div>
-            ))}
+          <div className="space-y-4">
+            {faqs.map((faq, index) => {
+              const isOpen = openIndex === index;
+
+              return (
+                <div
+                  key={index}
+                  className={`glass-card rounded-3xl border transition-all duration-300 ${
+                    isOpen ? "border-cyan-300/30 bg-[#07161c]" : "border-cyan-300/5"
+                  }`}
+                >
+                  <button
+                    onClick={() => toggleFaq(index)}
+                    className="w-full flex items-center justify-between p-6 sm:p-8 text-left outline-none"
+                  >
+                    <span className="text-lg sm:text-xl font-bold text-white transition-colors duration-300 hover:text-zelvora-primary">
+                      {faq.question}
+                    </span>
+                    <FaChevronDown
+                      size={14}
+                      className={`text-zelvora-primary transition-transform duration-300 ${
+                        isOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+
+                  <AnimatePresence initial={false}>
+                    {isOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="overflow-hidden"
+                      >
+                        <div className="px-6 pb-6 sm:px-8 sm:pb-8 text-sm leading-7 text-zelvora-secondary border-t border-cyan-300/5 pt-4">
+                          {faq.answer}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
     </main>
   );
 }
+
