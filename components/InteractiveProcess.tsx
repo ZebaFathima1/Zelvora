@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { FaComments, FaSitemap, FaCpu, FaCloudUploadAlt } from "react-icons/fa";
+import { FaComments, FaSitemap, FaMicrochip, FaCloudUploadAlt } from "react-icons/fa";
 
 const steps = [
   {
@@ -20,7 +20,7 @@ const steps = [
   {
     title: "3. Training & Tuning",
     desc: "We train transformer networks or integrate custom LLM fine-tuning pipelines.",
-    icon: FaCpu,
+    icon: FaMicrochip,
     color: "from-purple-400 to-pink-400",
   },
   {

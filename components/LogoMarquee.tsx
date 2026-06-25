@@ -1,6 +1,6 @@
 "use client";
 
-import { SiOpenai, SiGoogle, SiPytorch, SiNextdotjs, SiReact, SiTailwindcss, SiPython, SiHuggingface, SiTypescript, SiVercel } from "react-icons/si";
+import { SiOpenai, SiGoogle, SiPytorch, SiNextdotjs, SiReact, SiTailwindcss, SiPython, SiGithub, SiTypescript, SiVercel } from "react-icons/si";
 
 const techItems = [
   { name: "OpenAI", icon: SiOpenai, color: "text-white" },
@@ -10,7 +10,7 @@ const techItems = [
   { name: "React", icon: SiReact, color: "text-cyan-400" },
   { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-sky-400" },
   { name: "Python", icon: SiPython, color: "text-yellow-400" },
-  { name: "Hugging Face", icon: SiHuggingface, color: "text-yellow-500" },
+  { name: "GitHub", icon: SiGithub, color: "text-slate-300" },
   { name: "TypeScript", icon: SiTypescript, color: "text-blue-500" },
   { name: "Vercel", icon: SiVercel, color: "text-white" },
 ];
