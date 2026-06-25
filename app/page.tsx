@@ -15,6 +15,7 @@ import IntroLoader from "../components/IntroLoader";
 
 // Interactive custom components
 import CursorSpotlight from "../components/CursorSpotlight";
+import LogoAnimation from "../components/LogoAnimation";
 import NeuralNetwork from "../components/NeuralNetwork";
 import ChatbotButton from "../components/ChatbotButton";
 import LogoMarquee from "../components/LogoMarquee";
@@ -146,118 +147,70 @@ export default function Home() {
             <ChatbotButton />
             <Navbar />
 
-            {/* Hero Section with Full-screen Video Background */}
-            <section className="relative min-h-[95vh] flex items-center justify-center overflow-hidden px-6 py-32 sm:px-10 lg:px-16">
-              
-              {/* Full-screen Background Video Container */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1.5, ease: "easeOut" }}
-                className="absolute inset-0 w-full h-full z-0 pointer-events-none"
-              >
-                <video
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="w-full h-full object-cover"
-                  preload="auto"
-                >
-                  <source src="/zelvora-hero.mp4" type="video/mp4" />
-                </video>
-                {/* Subtle dark overlays and gradients for readability */}
-                <div className="absolute inset-0 bg-black/65" />
-                {/* Radial glow/vignette */}
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_20%,_#021b23_90%)] opacity-85" />
-                {/* Bottom transition gradient to next section */}
-                <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-[#021b23] to-transparent" />
-              </motion.div>
-
-              {/* Floating particles over the video */}
-              <div className="absolute inset-0 z-10 pointer-events-none overflow-hidden">
-                {[...Array(20)].map((_, i) => (
-                  <motion.div
-                    key={i}
-                    className="absolute h-1.5 w-1.5 rounded-full bg-cyan-400/30"
-                    style={{
-                      left: `${Math.random() * 100}%`,
-                      top: `${Math.random() * 100}%`,
-                    }}
-                    animate={{
-                      y: [0, -60, 0],
-                      x: [0, Math.random() * 30 - 15, 0],
-                      opacity: [0.15, 0.7, 0.15],
-                    }}
-                    transition={{
-                      duration: 8 + Math.random() * 10,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                      delay: Math.random() * 5,
-                    }}
-                  />
-                ))}
-              </div>
-
-              {/* Centered Glassmorphism Content Card */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-                className="relative z-20 w-full max-w-[960px] mx-auto p-8 sm:p-12 md:p-16 rounded-[40px] border border-cyan-300/10 bg-black/45 shadow-2xl backdrop-blur-xl text-center space-y-8"
-              >
-                <div className="inline-flex items-center gap-3 rounded-full border border-cyan-300/15 bg-black/50 px-4.5 py-2 text-xs sm:text-sm text-zelvora-secondary shadow-lg backdrop-blur-xl">
-                  <span className="h-2 w-2 rounded-full bg-zelvora-primary animate-pulse" />
-                  Engineering Tomorrow with Artificial Intelligence.
-                </div>
+            {/* Hero Section */}
+            <section className="relative isolate overflow-hidden px-6 pb-20 pt-32 sm:px-10 lg:px-16 lg:pt-40">
+              <div className="mx-auto grid max-w-[1320px] gap-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
                 
-                <div className="space-y-6">
-                  <h1 className="text-4xl font-extrabold leading-tight text-white sm:text-6xl md:text-7xl tracking-tight">
-                    Build the Future <br />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-zelvora-primary via-cyan-300 to-indigo-400 text-glow">
-                      with AI.
-                    </span>
-                  </h1>
-                  <p className="max-w-2xl mx-auto text-base sm:text-lg leading-8 text-zelvora-secondary">
-                    Zelvora Technologies is a premium AI startup building adaptive learning tools for students, custom software configurations, and enterprise integrations.
-                  </p>
+                {/* Left Column Copy */}
+                <div className="space-y-8 relative z-10">
+                  <div className="inline-flex items-center gap-3 rounded-full border border-cyan-300/15 bg-[#061217]/50 px-4.5 py-2 text-xs sm:text-sm text-zelvora-secondary shadow-lg backdrop-blur-xl">
+                    <span className="h-2 w-2 rounded-full bg-zelvora-primary animate-pulse" />
+                    Engineering Tomorrow with Artificial Intelligence.
+                  </div>
+                  
+                  <div className="space-y-6">
+                    <h1 className="max-w-3xl text-5xl font-extrabold leading-tight text-white sm:text-6xl lg:text-[76px] tracking-tight">
+                      Build the Future <br />
+                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-zelvora-primary via-cyan-300 to-indigo-400 text-glow">
+                        with AI.
+                      </span>
+                    </h1>
+                    <p className="max-w-xl text-base sm:text-lg leading-8 text-zelvora-secondary">
+                      Zelvora Technologies is a premium AI startup building adaptive learning tools for students, custom software configurations, and enterprise integrations.
+                    </p>
+                  </div>
+
+                  <div className="flex flex-col gap-4 sm:flex-row">
+                    <Link
+                      href="/contact"
+                      className="group inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-zelvora-primary via-zelvora-primaryMid to-zelvora-primaryDeep px-8 py-4 text-base font-bold text-zelvora-bg shadow-glow transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_40px_rgba(0,230,208,0.4)]"
+                    >
+                      Get Started <FaArrowRight size={12} className="transition-transform group-hover:translate-x-1" />
+                    </Link>
+                    <Link
+                      href="/courses"
+                      className="inline-flex items-center justify-center rounded-full border border-cyan-300/25 bg-white/5 px-8 py-4 text-base font-bold text-white transition duration-300 hover:border-cyan-200 hover:bg-white/10 hover:text-zelvora-primary"
+                    >
+                      Explore Courses
+                    </Link>
+                  </div>
+
+                  {/* Trust Stats */}
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8 border-t border-cyan-300/10">
+                    <div>
+                      <h4 className="text-3xl font-bold text-white tracking-tight">1000+</h4>
+                      <p className="text-[11px] text-zelvora-secondary uppercase tracking-widest mt-1">Students</p>
+                    </div>
+                    <div>
+                      <h4 className="text-3xl font-bold text-white tracking-tight">45+</h4>
+                      <p className="text-[11px] text-zelvora-secondary uppercase tracking-widest mt-1">Programs</p>
+                    </div>
+                    <div>
+                      <h4 className="text-3xl font-bold text-white tracking-tight">28+</h4>
+                      <p className="text-[11px] text-zelvora-secondary uppercase tracking-widest mt-1">Workshops</p>
+                    </div>
+                    <div>
+                      <h4 className="text-3xl font-bold text-white tracking-tight">16+</h4>
+                      <p className="text-[11px] text-zelvora-secondary uppercase tracking-widest mt-1">Deployments</p>
+                    </div>
+                  </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row justify-center gap-4">
-                  <Link
-                    href="/contact"
-                    className="group inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-zelvora-primary via-zelvora-primaryMid to-zelvora-primaryDeep px-8 py-4 text-base font-bold text-zelvora-bg shadow-glow transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_40px_rgba(0,230,208,0.4)]"
-                  >
-                    Get Started <FaArrowRight size={12} className="transition-transform group-hover:translate-x-1" />
-                  </Link>
-                  <Link
-                    href="/courses"
-                    className="inline-flex items-center justify-center rounded-full border border-cyan-300/25 bg-white/5 px-8 py-4 text-base font-bold text-white transition duration-300 hover:border-cyan-200 hover:bg-white/10 hover:text-zelvora-primary"
-                  >
-                    Explore Courses
-                  </Link>
+                {/* Right Column Interactive Globe */}
+                <div className="relative flex items-center justify-center z-10">
+                  <LogoAnimation />
                 </div>
-
-                {/* Trust Stats inside the centered card */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-cyan-300/10">
-                  <div>
-                    <h4 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">1000+</h4>
-                    <p className="text-[11px] text-zelvora-secondary uppercase tracking-widest mt-1">Students</p>
-                  </div>
-                  <div>
-                    <h4 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">45+</h4>
-                    <p className="text-[11px] text-zelvora-secondary uppercase tracking-widest mt-1">Programs</p>
-                  </div>
-                  <div>
-                    <h4 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">28+</h4>
-                    <p className="text-[11px] text-zelvora-secondary uppercase tracking-widest mt-1">Workshops</p>
-                  </div>
-                  <div>
-                    <h4 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">16+</h4>
-                    <p className="text-[11px] text-zelvora-secondary uppercase tracking-widest mt-1">Deployments</p>
-                  </div>
-                </div>
-              </motion.div>
+              </div>
             </section>
 
             {/* Infinite Tech Marquee */}
