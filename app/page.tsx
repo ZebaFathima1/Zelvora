@@ -443,8 +443,17 @@ export default function Home() {
                 </div>
               </div>
               
-              <div className="mt-12 border-t border-cyan-300/5 pt-8 text-center text-xs text-zelvora-secondary">
-                © 2026 Zelvora Technologies Pvt. Ltd. All rights reserved.
+              <div className="mt-12 border-t border-cyan-300/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center text-xs text-zelvora-secondary">
+                <p>© 2026 Zelvora Technologies Pvt. Ltd. All rights reserved.</p>
+                <div className="flex gap-4">
+                  <Link href="/privacy" className="hover:text-zelvora-primary transition-colors">
+                    Privacy Policy
+                  </Link>
+                  <span className="text-cyan-300/10">|</span>
+                  <Link href="/terms" className="hover:text-zelvora-primary transition-colors">
+                    Terms &amp; Conditions
+                  </Link>
+                </div>
               </div>
             </footer>
           </motion.main>
