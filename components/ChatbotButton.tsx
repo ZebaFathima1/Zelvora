@@ -28,7 +28,7 @@ export default function ChatbotButton() {
       } else if (lower.includes("price") || lower.includes("cost") || lower.includes("fee") || lower.includes("rupees") || lower.includes("₹")) {
         response = "Our beginner student courses are priced at an affordable rate of ₹99 to make AI education accessible to everyone.";
       } else if (lower.includes("contact") || lower.includes("email") || lower.includes("phone") || lower.includes("call")) {
-        response = "You can contact our team at zelvoratechnologies@gmail.com, or phone us at +91 91000 40993. Feel free to use the Contact page form too!";
+        response = "You can contact our team at info@zelvoratech.com. Feel free to use the Contact page form too!";
       } else if (lower.includes("service") || lower.includes("develop") || lower.includes("software")) {
         response = "We design adaptive AI Models, Custom Tech Solutions, live AI workshops, and bespoke Software Development. Learn more on our Services page!";
       }

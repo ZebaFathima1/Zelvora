@@ -388,42 +388,6 @@ export default function PrivacyPolicyPage() {
           </div>
         </section>
 
-        {/* 12. Contact / Grievance Officer */}
-        <section id="contact" className="space-y-4">
-          <div className="text-[10px] font-mono uppercase tracking-[0.15em] text-[#00d4ff]/60">Section 12</div>
-          <h2 className="text-xl font-bold text-white tracking-tight">
-            Contact &amp; Grievance Officer
-          </h2>
-          <p className="text-sm text-slate-300">
-            If you have any questions, concerns, or requests regarding this Privacy Policy or your data rights, please contact our designated Grievance Officer:
-          </p>
-          
-          {/* Line-Wise Flat Layout */}
-          <div className="space-y-4 text-sm leading-relaxed text-slate-300 border-l-2 border-[#00d4ff]/40 pl-6 py-2">
-            <div>
-              <span className="text-[10px] uppercase tracking-wider text-[#00d4ff]/80 block font-semibold">Grievance Officer Name</span>
-              <p className="text-base font-bold text-white mt-0.5">Mohammed Hamedullah Sajid</p>
-            </div>
-            <div>
-              <span className="text-[10px] uppercase tracking-wider text-[#00d4ff]/80 block font-semibold">Role</span>
-              <p className="text-sm text-slate-200 mt-0.5">Grievance Officer &amp; CHRO, Zelvora Technologies Pvt. Ltd.</p>
-            </div>
-            <div>
-              <span className="text-[10px] uppercase tracking-wider text-[#00d4ff]/80 block font-semibold">Email Address</span>
-              <a href="mailto:info@zelvoratech.com" className="text-sm text-[#00d4ff] hover:underline font-semibold block mt-0.5">
-                info@zelvoratech.com
-              </a>
-            </div>
-            <div>
-              <span className="text-[10px] uppercase tracking-wider text-[#00d4ff]/80 block font-semibold">Direct Contact</span>
-              <p className="text-sm text-slate-200 mt-0.5 font-semibold">+91 91000 40993</p>
-            </div>
-            <div>
-              <span className="text-[10px] uppercase tracking-wider text-[#00d4ff]/80 block font-semibold">Headquarters</span>
-              <p className="text-xs text-slate-400 mt-0.5">Hyderabad, Telangana, India.</p>
-            </div>
-          </div>
-        </section>
 
       </div>
 

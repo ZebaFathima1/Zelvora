@@ -168,17 +168,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="text-[10px] uppercase tracking-wider text-slate-500 font-semibold">Email</p>
-                      <p className="font-semibold text-white mt-1">zelvoratechnologies@gmail.com</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex gap-4 items-start">
-                    <div className="p-3 bg-cyan-400/10 rounded-2xl text-zelvora-primary">
-                      <FaPhoneAlt />
-                    </div>
-                    <div>
-                      <p className="text-[10px] uppercase tracking-wider text-slate-500 font-semibold">Phone</p>
-                      <p className="font-semibold text-white mt-1">+91 91000 40993</p>
+                      <p className="font-semibold text-white mt-1">info@zelvoratech.com</p>
                     </div>
                   </div>
                   

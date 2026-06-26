@@ -33,7 +33,7 @@ const faqs = [
   {
     question: "Where can I find your contact details?",
     answer:
-      "You can reach us at zelvoratechnologies@gmail.com or call +91 91000 40993. We also have a Contact page for direct inquiries.",
+      "You can reach us at info@zelvoratech.com. We also have a Contact page for direct inquiries.",
   },
 ];
 

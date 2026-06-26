@@ -437,8 +437,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="space-y-1.5 text-xs">
-                    <p className="font-medium text-white">zelvoratechnologies@gmail.com</p>
-                    <p>+91 91000 40993</p>
+                    <p className="font-medium text-white">info@zelvoratech.com</p>
                   </div>
                 </div>
               </div>
