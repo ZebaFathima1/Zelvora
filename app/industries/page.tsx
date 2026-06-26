@@ -322,7 +322,7 @@ export default function IndustriesPage() {
                 href="/contact"
                 className="group inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-white/5 px-8 py-4 text-base font-bold text-white transition hover:bg-white/10 hover:text-zelvora-primary"
               >
-                Contact Lab Team <FaArrowRight size={12} className="transition-transform group-hover:translate-x-1" />
+                Contact Team <FaArrowRight size={12} className="transition-transform group-hover:translate-x-1" />
               </Link>
               <Link
                 href="/"

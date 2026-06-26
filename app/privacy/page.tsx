@@ -429,11 +429,8 @@ export default function PrivacyPolicyPage() {
 
       {/* Footer */}
       <footer className="border-t border-white/5 bg-[#030912]/80 py-8 px-6 text-center text-xs text-slate-400">
-        <div className="mx-auto max-w-[960px] flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mx-auto max-w-[960px] flex justify-center">
           <p>© 2025 Zelvora Technologies Pvt. Ltd. · All Rights Reserved</p>
-          <a href="https://labs.zelvoratech.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#00d4ff] transition-colors">
-            labs.zelvoratech.com
-          </a>
         </div>
       </footer>
     </main>

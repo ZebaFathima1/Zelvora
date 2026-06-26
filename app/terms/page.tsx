@@ -404,12 +404,6 @@ export default function TermsAndConditionsPage() {
               </a>
             </div>
             <div>
-              <span className="text-[10px] uppercase tracking-wider text-[#00d4ff]/80 block font-semibold">Platform Portal</span>
-              <a href="https://labs.zelvoratech.com" target="_blank" className="text-sm text-slate-200 hover:text-white mt-0.5 font-semibold block">
-                labs.zelvoratech.com
-              </a>
-            </div>
-            <div>
               <span className="text-[10px] uppercase tracking-wider text-[#00b89c] block font-semibold">Typical Response Time</span>
               <p className="text-xs text-[#00b89c] mt-0.5">Within 7 business days</p>
             </div>
@@ -420,11 +414,8 @@ export default function TermsAndConditionsPage() {
 
       {/* Footer */}
       <footer className="border-t border-white/5 bg-[#030912]/80 py-8 px-6 text-center text-xs text-slate-400">
-        <div className="mx-auto max-w-[960px] flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mx-auto max-w-[960px] flex justify-center">
           <p>© 2025 Zelvora Technologies Pvt. Ltd. · All Rights Reserved</p>
-          <a href="https://labs.zelvoratech.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#00d4ff] transition-colors">
-            labs.zelvoratech.com
-          </a>
         </div>
       </footer>
     </main>
